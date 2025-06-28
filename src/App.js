@@ -18,7 +18,7 @@ function App() {
     formData.append('file', e.target.files[0]);
 
     try {
-      const response = await fetch('http://localhost:5000/upload', {
+      const response = await fetch('https://backend-fqhj.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -54,7 +54,7 @@ function App() {
     }
 
     try {
-      const response = await fetch('http://localhost:5000/generate', {
+      const response = await fetch('https://backend-fqhj.onrender.com/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -84,7 +84,7 @@ function App() {
 
   const downloadExcel = () => {
     if (downloadUrl) {
-      window.open(`http://localhost:5000${downloadUrl}`, '_blank');
+      window.open(`https://backend-fqhj.onrender.com${downloadUrl}`, '_blank');
     }
   };
 
