@@ -31,7 +31,7 @@ function App() {
     formData.append('file', e.target.files[0]);
 
     try {
-      const response = await fetch('https://backend-fqhj.onrender.com/upload', {
+      const response = await fetch('https://backend-2-okrq.onrender.com/upload', {
         method: 'POST',
         body: formData,
       });
@@ -77,7 +77,7 @@ function App() {
 
     setLoading(true);
     try {
-      const response = await fetch('https://backend-fqhj.onrender.com/generate', {
+      const response = await fetch('https://backend-2-okrq.onrender.com/generate', {
         method: 'POST',
         headers: {
           'Content-Type': 'application/json',
@@ -110,7 +110,7 @@ function App() {
 
   const downloadExcel = () => {
     if (downloadUrl) {
-      window.open(`https://backend-fqhj.onrender.com${downloadUrl}`, '_blank');
+      window.open(`https://backend-2-okrq.onrender.com${downloadUrl}`, '_blank');
       toast.info('Download started');
     } else {
       toast.warning('No file to download');
